@@ -1,0 +1,7 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - 80:3000

@@ -1,10 +1,13 @@
 import { Router } from "./Router";
+import { ThemeProvider } from "./components/theme-provider.tsx";
+import { Toaster } from "./components/ui/sonner.tsx";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router />
-    </div>
+      <Toaster position="top-center" duration={1000 * 5} />
+    </ThemeProvider>
   );
 }
 
